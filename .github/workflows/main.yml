@@ -30,10 +30,6 @@ jobs:
       - name: Build
         run: npm run build
         
-      - name: Check build output
-        run: |
-          echo "=== OUTPUT ==="
-          find dist/client -maxdepth 5 -type f -print
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
