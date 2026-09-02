@@ -29,13 +29,11 @@ jobs:
 
       - name: Build
         run: npm run build
-
+        
       - name: Check build output
         run: |
-          echo "=== DIST ==="
-          find dist -maxdepth 3 -type f 2>/dev/null || true
-          echo "=== ROOT ==="
-          ls -la
+          echo "=== OUTPUT ==="
+          find .output -maxdepth 5 -type f -print
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
