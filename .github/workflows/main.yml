@@ -33,10 +33,12 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./dist/client
+      -       - name: Check build output
+        run: |
+          echo "=== DIST ==="
+          find dist -maxdepth 3 -type f 2>/dev/null || true
+          echo "=== ROOT ==="
+          ls -la
 
       - name: Deploy
         id: deployment
