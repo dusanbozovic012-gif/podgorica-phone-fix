@@ -4,7 +4,11 @@ export default defineConfig({
   vite: {
     base: "/Podgorica-phone-fix/",
   },
-  prerender: {
-    enabled: true,
+  tanstackStart: {
+    pages: [{ path: "/" }],
+    prerender: {
+      enabled: true,
+      autoStaticPathsDiscovery: false,
+    },
   },
 });
